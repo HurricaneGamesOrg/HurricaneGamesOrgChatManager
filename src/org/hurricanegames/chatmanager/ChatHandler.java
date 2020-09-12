@@ -10,9 +10,9 @@ import org.hurricanegames.commandlib.utils.MiscBukkitUtils;
 
 public class ChatHandler implements Listener {
 
-	protected final ChatConfig config;
+	protected final ChatManagerConfig config;
 
-	public ChatHandler(ChatConfig config) {
+	public ChatHandler(ChatManagerConfig config) {
 		this.config = config;
 	}
 

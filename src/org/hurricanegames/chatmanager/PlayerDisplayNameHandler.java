@@ -11,9 +11,9 @@ import org.hurricanegames.commandlib.utils.MiscBukkitUtils;
 
 public class PlayerDisplayNameHandler implements Listener {
 
-	protected final ChatConfig config;
+	protected final ChatManagerConfig config;
 
-	public PlayerDisplayNameHandler(ChatConfig config) {
+	public PlayerDisplayNameHandler(ChatManagerConfig config) {
 		this.config = config;
 	}
 

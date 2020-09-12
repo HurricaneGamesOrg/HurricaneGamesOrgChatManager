@@ -18,11 +18,11 @@ import org.hurricanegames.commandlib.configurations.ConfigurationUtils.SimpleSet
 import org.hurricanegames.commandlib.configurations.ConfigurationUtils.TypeSerializer;
 import org.hurricanegames.commandlib.configurations.SimpleConfiguration;
 
-public class ChatConfig extends SimpleConfiguration {
+public class ChatManagerConfig extends SimpleConfiguration {
 
 	protected final File storageFile;
 
-	public ChatConfig(File storageFile) {
+	public ChatManagerConfig(File storageFile) {
 		this.storageFile = storageFile;
 	}
 

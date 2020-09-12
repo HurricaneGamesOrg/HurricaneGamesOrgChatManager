@@ -7,11 +7,11 @@ import org.bukkit.plugin.Plugin;
 public class ChatContainer {
 
 	protected final Plugin plugin;
-	protected final ChatConfig config;
+	protected final ChatManagerConfig config;
 
 	public ChatContainer(Plugin plugin) {
 		this.plugin = plugin;
-		this.config = new ChatConfig(new File(plugin.getDataFolder(), "config.yml"));
+		this.config = new ChatManagerConfig(new File(plugin.getDataFolder(), "config.yml"));
 	}
 
 	private boolean init;
@@ -26,7 +26,7 @@ public class ChatContainer {
 		plugin.getServer().getPluginManager().registerEvents(new ChatHandler(config), plugin);
 	}
 
-	public ChatConfig getConfig() {
+	public ChatManagerConfig getConfig() {
 		return config;
 	}
 
