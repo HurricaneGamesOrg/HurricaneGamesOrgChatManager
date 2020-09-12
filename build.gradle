@@ -72,7 +72,7 @@ shadowJar {
 
 	archiveName = jar.archiveName
 
-	String relocatePrefix = 'org.hurricanegames.spawnmanager.zlibs.'
+	String relocatePrefix = 'org.hurricanegames.chatmanager.zlibs.'
 
 	relocate 'org.hurricanegames.commandlib', relocatePrefix + 'org.hurricanegames.commandlib'
 
