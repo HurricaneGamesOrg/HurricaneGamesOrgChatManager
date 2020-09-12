@@ -1,0 +1,14 @@
+name: HGOChatManager
+main: org.hurricanegames.chatmanager.ChatManagerPlugin
+api-version: 1.13
+version: 1.0
+authors:
+- _Shevchik_
+depend:
+- Vault
+softdepend:
+- PlaceholderAPI
+commands:
+  chatmanageradmin:
+    description: ChatManager admin commands
+    usage: '/<command>'
