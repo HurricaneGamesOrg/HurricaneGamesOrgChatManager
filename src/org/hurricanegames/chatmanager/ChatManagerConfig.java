@@ -9,26 +9,16 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.hurricanegames.commandlib.configurations.BaseConfiguration;
-import org.hurricanegames.commandlib.configurations.ConfigurationUtils.ColorizedStringTypeSerializer;
-import org.hurricanegames.commandlib.configurations.ConfigurationUtils.IdentityTypeSerializer;
-import org.hurricanegames.commandlib.configurations.ConfigurationUtils.SimpleColorizedStringConfigurationField;
-import org.hurricanegames.commandlib.configurations.ConfigurationUtils.SimpleMapConfigurationField;
-import org.hurricanegames.commandlib.configurations.ConfigurationUtils.SimpleSetConfigurationField;
-import org.hurricanegames.commandlib.configurations.ConfigurationUtils.TypeSerializer;
-import org.hurricanegames.commandlib.configurations.SimpleConfiguration;
+import org.hurricanegames.pluginlib.configurations.annotated.AnnotatedConfiguration;
+import org.hurricanegames.pluginlib.configurations.annotated.AnnotatedRootYamlConfiguration;
+import org.hurricanegames.pluginlib.configurations.typeserializers.ColorizedStringTypeSerializer;
+import org.hurricanegames.pluginlib.configurations.typeserializers.StringTypeSerializer;
+import org.hurricanegames.pluginlib.configurations.typeserializers.TypeSerializer;
 
-public class ChatManagerConfig extends SimpleConfiguration {
-
-	protected final File storageFile;
+public class ChatManagerConfig extends AnnotatedRootYamlConfiguration {
 
 	public ChatManagerConfig(File storageFile) {
-		this.storageFile = storageFile;
-	}
-
-	@Override
-	protected File getStorageFile() {
-		return storageFile;
+		super(storageFile);
 	}
 
 	@ConfigurationFieldDefinition(fieldName = "displayname.format.default", fieldType = SimpleColorizedStringConfigurationField.class)
@@ -66,15 +56,15 @@ public class ChatManagerConfig extends SimpleConfiguration {
 			.toString();
 	}
 
-	protected static class MapStringColorizedStringConfigurationField<O extends BaseConfiguration> extends SimpleMapConfigurationField<O, String, String> {
+	protected static class MapStringColorizedStringConfigurationField<O extends AnnotatedConfiguration> extends SimpleMapConfigurationField<O, String, String> {
 
 		public MapStringColorizedStringConfigurationField(O configuration, Field field, String path) {
-			super(configuration, field, path, new IdentityTypeSerializer<>(String.class), ColorizedStringTypeSerializer.INSTANCE);
+			super(configuration, field, path, StringTypeSerializer.INSTANCE, ColorizedStringTypeSerializer.INSTANCE);
 		}
 
 	}
 
-	protected static class SetUnicodeBlockConfigurationField<O extends BaseConfiguration> extends SimpleSetConfigurationField<O, UnicodeBlock> {
+	protected static class SetUnicodeBlockConfigurationField<O extends AnnotatedConfiguration> extends SimpleSetConfigurationField<O, UnicodeBlock> {
 
 		public SetUnicodeBlockConfigurationField(O configuration, Field field, String path) {
 			super(configuration, field, path, new TypeSerializer<UnicodeBlock>() {

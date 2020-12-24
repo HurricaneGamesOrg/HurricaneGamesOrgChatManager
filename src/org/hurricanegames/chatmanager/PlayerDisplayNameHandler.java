@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.hurricanegames.chatmanager.integrations.PlaceholderAPIIntergration;
 import org.hurricanegames.chatmanager.integrations.VaultIntegration;
-import org.hurricanegames.commandlib.utils.MiscBukkitUtils;
+import org.hurricanegames.pluginlib.utils.bukkit.MiscBukkitUtils;
 
 public class PlayerDisplayNameHandler implements Listener {
 

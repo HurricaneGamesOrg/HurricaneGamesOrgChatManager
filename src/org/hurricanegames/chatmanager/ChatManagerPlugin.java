@@ -5,7 +5,7 @@ import org.hurricanegames.chatmanager.commands.ChatManagerAdminCommands;
 import org.hurricanegames.chatmanager.commands.ChatManagerCommandHelper;
 import org.hurricanegames.chatmanager.integrations.PlaceholderAPIIntergration;
 import org.hurricanegames.chatmanager.integrations.VaultIntegration;
-import org.hurricanegames.commandlib.commands.BukkitCommandExecutor;
+import org.hurricanegames.pluginlib.commands.BukkitCommandExecutor;
 
 public class ChatManagerPlugin extends JavaPlugin {
 
@@ -20,7 +20,7 @@ public class ChatManagerPlugin extends JavaPlugin {
 		container.init();
 
 		ChatManagerCommandHelper commandhelper = new ChatManagerCommandHelper(container);
-		getCommand("chatmanageradmin").setExecutor(new BukkitCommandExecutor(new ChatManagerAdminCommands(commandhelper), ChatManagerPermissions.ADMIN));
+		getCommand("chatmanageradmin").setExecutor(new BukkitCommandExecutor(new ChatManagerAdminCommands(commandhelper)));
 	}
 
 }
