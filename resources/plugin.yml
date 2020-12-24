@@ -1,5 +1,5 @@
 name: HGOChatManager
-version: 1.1
+version: 1.2
 main: org.hurricanegames.chatmanager.ChatManagerPlugin
 api-version: 1.13
 depend:
@@ -9,11 +9,12 @@ softdepend:
 
 commands:
   chatmanageradmin:
-    permission: hgo.chatmanager.admin
     description: ChatManager admin commands
     usage: '/<command>'
 
 permissions:
+  hgo.chatmanager.admin:
+    description: Admin access
   hgo.chatmanager.chat.unicode:
     description: Use any unicode symbols in chat
     default: op

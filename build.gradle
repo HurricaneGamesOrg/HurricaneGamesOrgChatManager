@@ -53,7 +53,7 @@ repositories {
 }
 
 dependencies {
-	compile group: 'com.github.HurricaneGamesOrg', name: 'HurricaneGamesOrgPluginLib', version: '3db1b4f1fb'
+	compile group: 'com.github.HurricaneGamesOrg', name: 'HurricaneGamesOrgPluginLib', version: '8992659acf'
 	compileOnly group: 'com.destroystokyo.paper', name: 'paper-api', version: '1.16.4-R0.1-SNAPSHOT'
 	compileOnly group: 'com.github.MilkBowl', name: 'VaultAPI', version: '1.7'
 	compileOnly group: 'me.clip', name: 'placeholderapi', version: '2.10.9'
